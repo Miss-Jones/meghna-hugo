@@ -19,8 +19,8 @@
                     </div>
                     {{"<!-- Express About Yourself -->" | safeHTML}}
                     <div class="content text-center">
-                      {{ with .title }}<h3 class="ddd">{{ . }}</h3>{{ end }}
-                      {{ with .content}}  <p>{{ . }}</p>{{ end }}
+                      {{ with .title }}<h3 class="ddd">{{ replace . "\n" "<br/>" | safeHTML }}</h3>{{ end }}
+                      {{ with .content}}  <p>{{ replace . "\n" "<br/>" | safeHTML }}</p>{{ end }}
                     </div>
                 </div>
             </div>

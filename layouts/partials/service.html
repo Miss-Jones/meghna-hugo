@@ -19,7 +19,7 @@
                         <i class="{{ .icon }}"></i>
                     </div>
                     <h3>{{ .title }}</h3>
-                    <p>{{ .content }}</p>
+                    <p>{{ replace .content "\n" "<br/>" | safeHTML }}</p>
                 </div>
             </article>
             {{"<!-- End Single Service Item -->" | safeHTML }}
