@@ -15,10 +15,17 @@
             {{"<!-- team member -->" | safeHTML}}
             <div class="col-md-3 col-sm-6 col-xs-12  wow fadeInDown" data-wow-duration="500ms">
                 <div class="team-member">
-                    <div class="member-photo">
+                    <div class="member-photo" onmouseover="onHoverImage(this.childNodes[3], '{{ .hoverImage | absURL }}')" onmouseout="onExitImage(this.childNodes[3],'{{ .image | absURL }}')">
                         {{"<!-- member photo -->" | safeHTML}}
                         <img class="img-responsive" src="{{ .image | absURL }}" alt="Meghna">
-
+                        <script>
+                        function onHoverImage(imagehtml, imagesrc){
+                            imagehtml.src = imagesrc;
+                        }
+                        function onExitImage(imagehtml, imagesrc){
+                            imagehtml.src = imagesrc;
+                        }
+                        </script>
                         {{"<!-- member social profile -->" | safeHTML}}
                         <div class="mask">
                             <ul class="list-inline">
@@ -37,10 +44,22 @@
                     </div>
                 </div>
             </div>
+
+            <!-- <script>
+                function hoverImage(x) {
+                    x.src = "{{ .hoverImage | absURL }}";
+                }
+                    
+                function normalImage(x) {
+                       
+                }
+                </script> -->
             {{"<!-- end team member -->" | safeHTML}}
             {{ end }}
         </div>
     </div>
 </section>
+
+
 {{"<!-- /team -->" | safeHTML}}
 {{ end }}
