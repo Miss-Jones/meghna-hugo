@@ -18,7 +18,7 @@
                     <div class="service-icon text-center">
                         <i class="{{ .icon }}"></i>
                     </div>
-                    <h3>{{ .title }}</h3>
+                    <h3>{{ replace .title  "\n" "<br/>" | safeHTML}}</h3>
                     <p>{{ replace .content "\n" "<br/>" | safeHTML }}</p>
                 </div>
             </article>
