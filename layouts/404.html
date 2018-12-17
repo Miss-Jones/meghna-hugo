@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+
+{{ if .Site.Params.notfound.enable }}
+{{"<!-- 404 Slider-->" | safeHTML}}
+<section class="hero-area" style='background-image: url("{{ .Site.Params.notfound.bgImage | absURL }}"); '>
+    <div class="block">
+       {{with .Site.Params.notfound.heading}} <h1>{{ . }}</h1>{{ end }}
+       {{with .Site.Params.notfound.content}} <p>{{ replace . "\n" "<br/>" | safeHTML }}</p> {{ end }}
+       {{ if .Site.Params.notfound.btn}}
+        <a data-scroll href="{{ .Site.Params.notfound.btnURL}}" class="btn btn-transparent">{{ .Site.Params.notfound.btnText}}</a>
+        {{ end }}
+    </div>
+</section>
+{{"<!-- /404 Slider-->" | safeHTML}}
+{{end}}
+
+{{ partial "navigation.html" . }}
+
+{{ partial "footer.html" . }}
