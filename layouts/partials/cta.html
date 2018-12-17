@@ -6,7 +6,28 @@
             <div class="col-md-12 text-center">
                {{ with .Site.Params.cta.title}} <h2>{{ . }}</h2> {{ end }}
                {{ with .Site.Params.cta.content }} <p>{{ . }}</p> {{ end }}
-                <a href="{{ .Site.Params.cta.btnURL }}" class="btn btn-main">{{ with .Site.Params.cta.btnText }} {{ . }} {{end}}</a>
+
+               <div class="cta-form">
+                <form id="cta-form" method="post" action="sendmail.php" role="form">
+
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" class="cta-control" name="email" id="email">
+                    </div>
+
+                    <div id="cta-mail-success" class="success">
+                        Thank you. The Mailman is on His Way :)
+                    </div>
+
+                    <div id="cta-mail-fail" class="error">
+                        Sorry, don't know what happened. Try later :(
+                    </div>
+
+                    <div id="cta-cf-submit">
+                        <input type="submit" id="cta-submit" class="btn btn-transparent" value="Submit">
+                    </div>
+
+                </form>
+            </div>
             </div>
         </div>
     </div>
