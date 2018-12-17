@@ -44,8 +44,10 @@
 		<script type="text/javascript" src="{{ "plugins/smooth-scroll/dist/js/smooth-scroll.min.js" | absURL}}"></script>
 		{{"<!-- Magnific popup -->" | safeHTML}}
 		<script type="text/javascript" src="{{ "plugins/magnific-popup/dist/jquery.magnific-popup.min.js" | absURL}}"></script>
+		{{ if .Site.Data.contact.enable_maps }}
 		{{"<!-- Google Map API -->" | safeHTML}}
 		<script type="text/javascript"  src="{{ .Site.Params.gmapAPI | absURL }}"></script>
+		{{ end }}
 		{{"<!-- Sticky Nav -->" | safeHTML}}
 		<script type="text/javascript" src="{{ "plugins/Sticky/jquery.sticky.js" | absURL}}"></script>
 		{{"<!-- Number Counter Script -->" | safeHTML}}

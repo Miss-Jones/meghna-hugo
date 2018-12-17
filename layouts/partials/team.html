@@ -1,6 +1,7 @@
 {{ if .Site.Data.team.enable}}
 {{"<!-- Start Our Team -->" | safeHTML}}
 <section id="our-team" class="section">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <div class="container">
         <div class="row">
 
@@ -17,8 +18,8 @@
                 <div class="team-member">
                     <div class="member-photo" onmouseover="this.childNodes[3].style='display: none;'; this.childNodes[5].style='display: block;';" onmouseout="this.childNodes[3].style='display: block;'; this.childNodes[5].style='display: none;';">
                         {{"<!-- member photo -->" | safeHTML}}
-                        <img rel="prefetch" class="img-responsive" src="{{ .image | absURL }}" alt="team_normal_image" style="display: block;">
-                        <img rel="prefetch" class="img-responsive" src="{{ .hoverImage | absURL }}" alt="team_hover_image\" style="display: none;">
+                        <img class="img-responsive" src="{{ .image | absURL }}" alt="Meghna">
+                        <img class="img-responsive" src="{{ .hoverImage | absURL }}" alt="Meghna" style="display: none">
                         {{"<!-- member social profile -->" | safeHTML}}
                         <div class="mask">
                             <ul class="list-inline">
@@ -37,16 +38,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <script>
-                function hoverImage(x) {
-                    x.src = "{{ .hoverImage | absURL }}";
-                }
-                    
-                function normalImage(x) {
-                       
-                }
-                </script> -->
             {{"<!-- end team member -->" | safeHTML}}
             {{ end }}
         </div>
