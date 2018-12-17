@@ -1190,8 +1190,8 @@ a:hover {
 }
 
 .member-photo:hover img {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 .member-photo img {
