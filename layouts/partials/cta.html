@@ -10,7 +10,7 @@
                <div class="cta-form">
                 <form id="cta-form" role="form">
                     <div id="cta-cf-submit">
-                        <button id="cta-submit" class="btn btn-transparent">Subscribe to our mailing list</button>
+                        <button id="cta-submit" class="btn btn-transparent">{{ with .Site.Params.cta.btnText }} {{ . }} {{end}}</button>
                     </div>
 
                 </form>
