@@ -8,29 +8,18 @@
                {{ with .Site.Params.cta.content }} <p>{{ . }}</p> {{ end }}
 
                <div class="cta-form">
-                <form id="cta-form" method="post" action="sendmail.php" role="form">
-
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" class="cta-control" name="email" id="email">
-                    </div>
-
-                    <div id="cta-mail-success" class="success">
-                        Thank you. The Mailman is on His Way :)
-                    </div>
-
-                    <div id="cta-mail-fail" class="error">
-                        Sorry, don't know what happened. Try later :(
-                    </div>
-
+                <form id="cta-form" role="form">
                     <div id="cta-cf-submit">
-                        <input type="submit" id="cta-submit" class="btn btn-transparent" value="Submit">
+                        <button id="cta-submit" class="btn btn-transparent">Subscribe to our mailing list</button>
                     </div>
 
                 </form>
-            </div>
+               </div>
             </div>
         </div>
     </div>
 </section>
 {{"<!-- Start Services Section -->" | safeHTML}}
 {{ end }}
+
+

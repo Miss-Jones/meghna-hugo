@@ -81,6 +81,16 @@ jQuery(function ($) {
 	/* ========================================================================= */
 	/*	CTA newsletter subscribe
 	/* =========================================================================  */
+
+
+    $('#cta-submit').click(function(e){
+        e.preventDefault();
+        window.require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us7.list-manage.com","uuid":"37aeaf79050c475de2fe538df","lid":"7ecfa5cdf2","uniqueMethods":true}) });
+        document.cookie = 'MCEvilPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+
+    })
+
+/*
 	$('#cta-submit').click(function(e){
 		e.preventDefault();
 		var cta_error = false;
@@ -104,6 +114,7 @@ jQuery(function ($) {
 			/* using the jquery's post(ajax) function and a lifesaver
 			function serialize() which gets all the data from the form
 			we submit it to send_email.php */
+        /*
 			$.post("sendmail.php", $("#cta-form").serialize(), function (result) {
 				//and after the ajax request ends we check the text returned
 				if (result == 'sent') {
@@ -120,6 +131,8 @@ jQuery(function ($) {
 			});
 		}
 	})
+    */
+
 	/* ========================================================================= */
 	/*   Contact Form Validating
 	/* ========================================================================= */
