@@ -27,7 +27,7 @@
 
             {{"<!-- Contact Form -->" | safeHTML}}
             <div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-                <form id="contact-form" method="post" action="sendmail.php" role="form">
+                <form id="contact-form" action="https://formspree.io/contact@sidetracked.dk" method="POST" role="form">
 
                     <div class="form-group">
                         <input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
@@ -35,10 +35,6 @@
 
                     <div class="form-group">
                         <input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
                     </div>
 
                     <div class="form-group">
@@ -53,6 +49,7 @@
                         Sorry, don't know what happened. Try later :(
                     </div>
 
+                    <input type="hidden" name="_subject" value="Sidetracked Contact Form Submission">
                     <div id="cf-submit">
                         <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
                     </div>
