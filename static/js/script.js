@@ -83,13 +83,14 @@ jQuery(function ($) {
 	/* =========================================================================  */
 
 
-    $('#cta-submit').click(function(e){
-        e.preventDefault();
+	$('#cta-submit').click(popup_sub(e));
+	$('#landingpage-submit').click(popup_sub(e));
+
+	function popup_sub(e){
+		e.preventDefault();
         window.require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us7.list-manage.com","uuid":"37aeaf79050c475de2fe538df","lid":"7ecfa5cdf2","uniqueMethods":true}) });
         document.cookie = 'MCEvilPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
-
-    })
-
+	}
 
 	/* ========================================================================= */
 	/*   Contact Form Validating

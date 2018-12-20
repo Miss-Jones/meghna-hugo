@@ -1,27 +1,18 @@
 {{ if .Site.Params.banner.enable }}
 {{"<!-- Welcome Slider-->" | safeHTML}}
 <section class="hero-area" style='background-image: url("{{ .Site.Params.banner.bgImage | absURL }}");'>
-    <div class="block">
-       {{with .Site.Params.banner.heading}} <h1 style="font-size:3em;">{{ . }}</h1>{{ end }}
-       {{with .Site.Params.banner.content}} <p style='text-align: left'>{{ replace . "\n" "<br/>" | safeHTML }}</p> {{ end }}
-       {{ if .Site.Params.banner.btn}}
-        <a data-scroll href="{{ .Site.Params.banner.btnURL}}" class="btn btn-transparent">{{ .Site.Params.banner.btnText}}</a>
-        {{ end }}
+    <div class="container">
+        <div class="row">
+                <div class="hero-info col-md-6">
+                        {{with .Site.Params.banner.subtitle}} <h2>{{ . }}</h2>{{ end }}
+                        {{with .Site.Params.banner.heading}} <h1 style="font-size:3em;">{{ . }}</h1>{{ end }}
+                        {{with .Site.Params.banner.content}} <p>{{ replace . "\n" "<br/>" | safeHTML }}</p> {{ end }}
+                        {{ if .Site.Params.banner.btn}}
+                            <a data-scroll href="{{ .Site.Params.banner.btnURL}}" class="btn btn-transparent" id="landingpage-submit">{{ .Site.Params.banner.btnText}}</a>
+                            {{ end }}
+                </div>
+        </div>
     </div>
-    <div class="block" style='visibility: hidden;'>
-        {{with .Site.Params.banner.heading}} <h1 style="font-size:3em;">{{ . }}</h1>{{ end }}
-        {{with .Site.Params.banner.content}} <p>{{ replace . "\n" "<br/>" | safeHTML }}</p> {{ end }}
-        {{ if .Site.Params.banner.btn}}
-         <a data-scroll href="{{ .Site.Params.banner.btnURL}}" class="btn btn-transparent">{{ .Site.Params.banner.btnText}}</a>
-         {{ end }}
-     </div>
-     <!-- <div class="block" style='visibility: hidden;'>
-        {{with .Site.Params.banner.heading}} <h1 style="font-size:3em;">{{ . }}</h1>{{ end }}
-        {{with .Site.Params.banner.content}} <p>{{ replace . "\n" "<br/>" | safeHTML }}</p> {{ end }}
-        {{ if .Site.Params.banner.btn}}
-         <a data-scroll href="{{ .Site.Params.banner.btnURL}}" class="btn btn-transparent">{{ .Site.Params.banner.btnText}}</a>
-         {{ end }}
-     </div> -->
 </section>
 {{"<!-- /Welcome Slider-->" | safeHTML}}
 {{end}}
