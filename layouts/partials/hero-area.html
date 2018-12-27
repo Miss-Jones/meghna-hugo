@@ -14,5 +14,10 @@
         </div>
     </div>
 </section>
+{{ if .Site.Params.banner.arrow.enable }}
+<section id="arrow" class="hero-area-arrow">
+    <a href="#about"><span></span><span></span><span></span></a>
+</section> 
+{{ end }}
 {{"<!-- /Welcome Slider-->" | safeHTML}}
 {{end}}
