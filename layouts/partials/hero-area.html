@@ -1,6 +1,10 @@
 {{ if .Site.Params.banner.enable }}
 {{"<!-- Welcome Slider-->" | safeHTML}}
 <section class="hero-area" style='background-image: url("{{ .Site.Params.banner.bgImage | absURL }}");'>
+    {{"<!-- logo -->" | safeHTML}}
+    <!-- <a class="hero-area-logo" href="{{ .Site.BaseURL | absURL }}">
+        <img src="{{ .Site.Params.logo | absURL }}" alt="Logo" />
+    </a> -->
     <div class="container">
         <div class="row">
                 <div class="hero-info col-md-6">
@@ -9,7 +13,7 @@
                         {{with .Site.Params.banner.content}} <p>{{ replace . "\n" "<br/>" | safeHTML }}</p> {{ end }}
                         {{ if .Site.Params.banner.btn}}
                             <a data-scroll href="{{ .Site.Params.banner.btnURL}}" class="btn btn-transparent" id="landingpage-submit">{{ .Site.Params.banner.btnText}}</a>
-                            {{ end }}
+                        {{ end }}
                 </div>
         </div>
     </div>
