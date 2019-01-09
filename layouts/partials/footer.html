@@ -47,10 +47,7 @@
 		{{ if .Site.Data.contact.enable_maps }}
 		{{"<!-- Google Map API -->" | safeHTML}}
 		<script type="text/javascript"  src="{{ .Site.Params.gmapAPI | absURL }}"></script>
-
 		{{ end }}
-		{{"<!-- Mailchimp -->" | safeHTML}}
-        <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 		{{"<!-- Sticky Nav -->" | safeHTML}}
 		<script type="text/javascript" src="{{ "plugins/Sticky/jquery.sticky.js" | absURL}}"></script>
 		{{"<!-- Number Counter Script -->" | safeHTML}}
