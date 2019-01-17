@@ -26,6 +26,7 @@
                         {{ range $.Site.Menus.nav }}
                         <li><a data-scroll href="#{{ .URL }}">{{ .Name }}</a></li>
                         {{ end }}
+                        <li><a data-scroll href="{{ $.Site.BaseURL }}{{ $.Site.Params.presskit_URL }}">{{ $.Site.Params.presskit_name }}</a></li>
                     </ul>
                 </nav>
         {{ else }}
@@ -33,8 +34,9 @@
                     <ul id="nav" class="nav navbar-nav navigation-menu">
                         <li><a data-scroll href="{{ $.Site.BaseURL }}#body">{{ with $.Site.Params.home }}{{ . }}{{ end }}</a></li>
                         {{ range $.Site.Menus.nav }}
-                        <li><a data-scroll href="{{ $.Site.BaseURL }}#{{ .URL }}">{{ .Name }}</a></li>
+                            <li><a data-scroll href="{{ $.Site.BaseURL }}#{{ .URL }}">{{ .Name }}</a></li>
                         {{ end }}
+                        <li><a data-scroll href="{{ $.Site.BaseURL }}{{ $.Site.Params.presskit_URL }}">{{ $.Site.Params.presskit_name }}</a></li>
                     </ul>
                 </nav>
         {{ end }}
