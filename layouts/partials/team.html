@@ -33,7 +33,7 @@
                     <div class="member-meta">
                         <h4>{{ .name }}</h4>
                         <span>{{ .designation }}</span>
-                        <p>{{ .description }}</p>
+                        <p>{{ replace .description  "\n" "<br/>" | safeHTML }}</p>
                     </div>
                 </div>
             </div>
