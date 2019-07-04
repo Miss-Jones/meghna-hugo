@@ -18,7 +18,7 @@
                         <article class="col-md-4 col-sm-6 col-xs-12 clearfix wow fadeInUp" data-wow-duration="500ms">
                             <div class="post-block">
                                 <div class="media-wrapper">
-                                    {{ with .Params.image }}<img src="{{ . | absURL }}" alt="post-image" class="img-responsive">{{ end }}
+                                    <a href="{{ .Permalink }}"> {{ with .Params.image }}<img src="{{ . | absURL }}" alt="post-image" class="img-responsive">{{ end }}</a>
                                 </div>
 
                                 <div class="content">
