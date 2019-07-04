@@ -38,7 +38,7 @@
             {{"<!-- Contact Details -->" | safeHTML}}
             <div class="contact-info col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
                 {{ with .Site.Data.contact.title }}<h3>{{ . }}</h3> {{ end }}
-                {{ with .Site.Data.contact.content }} <p> {{ . }} </p> {{ end }}
+                {{ with .Site.Data.contact.content | markdownify}} <p> {{ . }} </p> {{ end }}
                 <div class="contact-details">
                     {{ range .Site.Data.contact.contactDetails }}
                     <div class="con-info clearfix">
