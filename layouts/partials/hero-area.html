@@ -14,7 +14,7 @@
             <div class="hero-info col-md-6">
                     {{with .Site.Params.banner.content}} <p>{{ replace . "\n" "<br/>" | safeHTML }}</p> {{ end }}
                     {{ if .Site.Params.banner.btn}}
-                        <a data-scroll href="{{ .Site.Params.cta.signupLink}}" class="btn btn-transparent" id="landingpage-submit">{{ .Site.Params.banner.btnText}}</a>
+                        <a data-scroll href="{{ .Site.Params.banner.btnURL}}" class="btn btn-transparent" id="landingpage-submit">{{ .Site.Params.banner.btnText}}</a>
                
                     {{ end }}
             </div>
